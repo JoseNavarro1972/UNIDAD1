@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Círculo
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Radio (cm)</ion-label>
+    <!-- Corregir la referencia al modelo -->
+    <ion-input type="number" [(ngModel)]="radio"></ion-input>
+  </ion-item>
+  <ion-button expand="full" (click)="calcularPerimetro()">Calcular perímetro</ion-button>
+  <ion-item *ngIf="perimetroCalculado">
+    <ion-label>El perímetro es: {{ resultadoPerimetro }} cm</ion-label>
+  </ion-item>
+</ion-content>
